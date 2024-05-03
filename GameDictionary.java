@@ -18,7 +18,7 @@ public class GameDictionary{
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String stringData = myReader.nextLine();
-                this.data.add(stringData);
+                this.data.add(stringData.toLowerCase());
             }
             myReader.close();
         }
