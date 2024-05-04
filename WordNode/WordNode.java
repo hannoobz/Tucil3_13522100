@@ -1,3 +1,4 @@
+package WordNode;
 import java.util.ArrayList;
 
 public class WordNode{
@@ -59,8 +60,6 @@ public class WordNode{
     }
 
     //Operations
-
-    //Check if move is legal
     public Integer getDifference(String target){
         if(this.word.length()!=target.length()){
             return -1;
@@ -68,7 +67,7 @@ public class WordNode{
         else{
             Integer diff = 0;
             for(int i=0;i<this.word.length();i++){
-                if(this.word.charAt(i)==target.charAt(i)){
+                if(this.word.charAt(i)!=target.charAt(i)){
                     diff++;
                 }
             }
@@ -101,10 +100,11 @@ public class WordNode{
     }
 
     public void printNode(){
-        System.out.println(getWord());
-        System.out.println(getWeight());
-        System.out.println(getHeuristic());
-        System.out.println(getParent());
+        System.out.println("Word: "+getWord());
+        System.out.println("Weight: "+getWeight());
+        System.out.println("Heuristic: "+getHeuristic());
+        System.out.println("Cost: "+getTotalCost());
+        System.out.println("Parent: "+getParent());
     }
 
 
