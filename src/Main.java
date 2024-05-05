@@ -101,7 +101,7 @@ public class Main extends javax.swing.JFrame {
             }
         
             public void update() {
-                startWordString = startWord.getText();
+                startWordString = startWord.getText().toLowerCase();
                 System.out.println(startWordString);
             }
         });
@@ -120,7 +120,7 @@ public class Main extends javax.swing.JFrame {
             }
         
             public void update() {
-                targetWordString = targetWord.getText();
+                targetWordString = targetWord.getText().toLowerCase();
                 System.out.println(targetWordString);
             }
         });
