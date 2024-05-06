@@ -199,7 +199,10 @@ public class Main extends javax.swing.JFrame {
             }
         }
         if(solver!=null){
+            long before = Runtime.getRuntime().freeMemory();
             solver.solve(gameDictionary);
+            System.out.println(" \t Free Memory Diff");
+            System.out.println(" \t " + (before-Runtime.getRuntime().freeMemory()));
             System.out.println(solver.getPathSolution());
             Solution.main(solver,algorithmString);
         }
