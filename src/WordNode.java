@@ -97,21 +97,4 @@ public class WordNode{
         return result;
 
     }
-
-    public void printNode(){
-        System.out.println("Word: "+getWord());
-        System.out.println("Weight: "+getWeight());
-        System.out.println("charDiff: "+getcharDiff());
-        System.out.println("Cost: "+getTotalCost());
-        System.out.println("Parent: "+getParent());
-    }
-
-
-    // public static void main(String[] args){
-    //     WordNode a = new WordNode("kill", 0, 0);
-    //     ArrayList<String> possible = a.generatePossibleMove(); 
-    //     a.printNode();
-    //     System.out.println(possible);
-
-    // }
 }
