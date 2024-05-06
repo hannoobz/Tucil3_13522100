@@ -10,6 +10,10 @@
 <project name="Tucil3_13522100" default="default" basedir=".">
     <description>Builds, tests, and runs the project Tucil3_13522100.</description>
     <import file="nbproject/build-impl.xml"/>
+    <target name="jar-no-build" depends="jar">
+        <delete dir="build"/>
+        <copy file="src/Dictionary.txt" todir="bin"/>
+    </target>
     <!--
 
     There exist several targets which are by default empty and which can be 
