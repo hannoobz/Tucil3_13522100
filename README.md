@@ -70,7 +70,7 @@ java Main
 5. Pop-up solusi akan muncul, pop-up dapat ditutup atau dibiarkan sebelum melakukan pencarian selanjutnya
 
 ## Additional Note
-Algoritma GBFS sangat rentan dengan circular loop/infinite loop, sehingga terdapat kemungkinan looping akan dibreak untuk mencegah penggunaan resource berlebihan untuk mencari solusi GBFS dan kemudian mengembalikan tampilan tidak ada solusi
+Algoritma GBFS sangat rentan dengan circular loop/infinite loop, sehingga terdapat kemungkinan looping akan dibreak untuk mencegah penggunaan resource berlebihan untuk mencari solusi GBFS. Dalam kasus ini, program akan menampilkan tampilan tidak ada solusi
 
 
 ## Author
