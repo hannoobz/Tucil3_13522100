@@ -5,19 +5,19 @@ public class WordNode{
     // Attribute
     private String word;
     private Integer weight;
-    private Integer heuristic;
+    private Integer charDiff;
     private WordNode parent;
 
     // Constructor
-    public WordNode(String word, Integer weight, Integer heuristic, WordNode parent){
+    public WordNode(String word, Integer weight, Integer charDiff, WordNode parent){
         this.word = word;
         this.weight = weight;
-        this.heuristic = heuristic;
+        this.charDiff = charDiff;
         this.parent = parent;
     }
 
-    public WordNode(String word, Integer weight, Integer heuristic){
-        this(word, weight, heuristic, null);
+    public WordNode(String word, Integer weight, Integer charDiff){
+        this(word, weight, charDiff, null);
     }
 
     // Setter
@@ -29,8 +29,8 @@ public class WordNode{
         this.weight = weight;
     }
 
-    public void setHeuristic(Integer heuristic) {
-        this.heuristic = heuristic;
+    public void setcharDiff(Integer charDiff) {
+        this.charDiff = charDiff;
     }
     
     public void setParent(WordNode parent) {
@@ -46,8 +46,8 @@ public class WordNode{
         return weight;
     }
 
-    public Integer getHeuristic() {
-        return heuristic;
+    public Integer getcharDiff() {
+        return charDiff;
     }
 
     public WordNode getParent() {
@@ -55,7 +55,7 @@ public class WordNode{
     }
 
     public Integer getTotalCost(){
-        return weight+heuristic;
+        return weight+charDiff;
     }
 
     //Operations
@@ -101,7 +101,7 @@ public class WordNode{
     public void printNode(){
         System.out.println("Word: "+getWord());
         System.out.println("Weight: "+getWeight());
-        System.out.println("Heuristic: "+getHeuristic());
+        System.out.println("charDiff: "+getcharDiff());
         System.out.println("Cost: "+getTotalCost());
         System.out.println("Parent: "+getParent());
     }

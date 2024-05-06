@@ -74,10 +74,10 @@ public class GreedyBFS extends BaseSolver {
     
     class GBFSComparator implements Comparator<WordNode>{
     public int compare(WordNode n1, WordNode n2) {
-       if(n1.getHeuristic()>n2.getHeuristic()){
+       if(n1.getcharDiff()>n2.getcharDiff()){
            return 1;
        }
-       else if(n1.getHeuristic()<n2.getHeuristic()){
+       else if(n1.getcharDiff()<n2.getcharDiff()){
            return -1;
        }
        return 0;
